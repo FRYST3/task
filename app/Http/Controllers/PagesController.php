@@ -20,4 +20,9 @@ class PagesController extends Controller
 
         return view('article', compact('article', 'comments'));
     }
+
+    public function admin_login() {
+
+        return view('admin.login');
+    }
 }

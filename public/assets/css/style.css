@@ -163,7 +163,7 @@ a {
 }
 
 .main_article_group_label {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: rgba(236, 240, 249, 0.4);
 }
@@ -244,4 +244,41 @@ a {
     cursor: pointer;
     max-width: 250px;
     margin: 15px auto;
+}
+
+.admin_auth {
+    padding: 15px;
+    background: rgba(236, 240, 249, 0.04);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.admin_auth__title {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(236, 240, 249, 0.4);
+    text-align: center;
+}
+
+.auth__btn {
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(61, 115, 255, 1);
+    color: #FFF;
+    padding: 15px 25px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.admin_edit__article {
+    width: 100%;
+    padding: 15px;
+    background: rgba(236, 240, 249, 0.04);
+    border-radius: 12px;
 }
