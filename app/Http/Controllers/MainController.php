@@ -34,7 +34,7 @@ class MainController extends Controller
         ], [
             'name.required' => 'Пожалуйста, введите ваше имя.',
             'text.required' => 'Пожалуйста, введите текст.',
-            'text.min' => 'Пароль должен быть не менее 8 символов.',
+            'text.min' => 'Текст должен быть не менее 10 символов.',
         ]);
 
         if ($validator->fails()) {

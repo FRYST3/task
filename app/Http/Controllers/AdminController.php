@@ -58,7 +58,18 @@ class AdminController extends Controller
             'short_desc' => 'required',
             'description' => 'required',
             'image' => 'nullable|image|max:4096'
+        ], [
+            'title' => 'Пожалуйста, введите заголовок',
+            'short_desc.required' => 'Пожалуйста, введите короткое описание.',
+            'description.required' => 'Пожалуйста, введите описание.',
         ]);
+
+        if ($validatedData->fails()) {
+            return response()->json([
+                'error' => true,
+                'message' => $validatedData->errors()->first()
+            ]);
+        }
 
         $article = Articles::findOrFail($id);
 
@@ -73,7 +84,7 @@ class AdminController extends Controller
             'title' => $validatedData['title'],
             'short_desc' => $validatedData['short_desc'],
             'description' => $validatedData['description'],
-            'img' => $validatedData['image'] ?? $article->image,
+            'img' => $validatedData['image'] ?? $article->img,
         ]);
 
         return response()->json(['success' => true]);
@@ -86,7 +97,19 @@ class AdminController extends Controller
             'short_desc' => 'required',
             'description' => 'required',
             'image' => 'required|image|max:4096'
+        ], [
+            'title' => 'Пожалуйста, введите заголовок',
+            'short_desc.required' => 'Пожалуйста, введите короткое описание.',
+            'description.required' => 'Пожалуйста, введите описание.',
+            'image.required' => 'Пожалуйста, загрузите фото.',
         ]);
+
+        if ($validatedData->fails()) {
+            return response()->json([
+                'error' => true,
+                'message' => $validatedData->errors()->first()
+            ]);
+        }
 
         if ($r->hasFile('image')) {
             $image = $r->file('image');

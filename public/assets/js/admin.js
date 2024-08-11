@@ -22,11 +22,15 @@ $(document).ready(function () {
                 if (response.success) {
                     notify('Успешно', 'success');
                 } else {
-                    notify('Ошибка', 'error');
+                    notify(response.message, 'error');
                 }
             },
             error: function(error) {
-                notify('Ошибка', 'error');
+                if (error.responseJSON && error.responseJSON.message) {
+                    notify(error.responseJSON.message, 'error');
+                } else {
+                    notify('Произошла ошибка', 'error');
+                }
             }
         });
     });
@@ -46,11 +50,15 @@ $(document).ready(function () {
                 if (response.success) {
                     notify('Успешно', 'success');
                 } else {
-                    notify('Ошибка', 'error');
+                    notify(response.message, 'error');
                 }
             },
             error: function(error) {
-                notify('Ошибка', 'error');
+                if (error.responseJSON && error.responseJSON.message) {
+                    notify(error.responseJSON.message, 'error');
+                } else {
+                    notify('Произошла ошибка', 'error');
+                }
             }
         });
     });
