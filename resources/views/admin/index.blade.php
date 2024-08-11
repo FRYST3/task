@@ -21,6 +21,7 @@
     <div class="header_nav">
         <a href="/" class="header_nav__item">Главная</a>
         <a href="/admin" class="header_nav__item">Администрирование</a>
+        <a href="/admin/new/article" class="header_nav__item">Добавить запись</a>
     </div>
 </header>
 <main class="main__container">

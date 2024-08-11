@@ -46,6 +46,11 @@ class AdminController extends Controller
         return view('admin.edit', compact('article'));
     }
 
+    public function view_newArticle()
+    {
+        return view('admin.add');
+    }
+
     public function article_save(Request $r, $id)
     {
         $validatedData = $r->validate([
@@ -72,5 +77,31 @@ class AdminController extends Controller
         ]);
 
         return response()->json(['success' => true]);
+    }
+
+    public function article_add(Request $r)
+    {
+        $validatedData = $r->validate([
+            'title' => 'required',
+            'short_desc' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|max:4096'
+        ]);
+
+        if ($r->hasFile('image')) {
+            $image = $r->file('image');
+            $imageName = time() . '.' . $image->extension();
+            $image->move(public_path('assets/images'), $imageName);
+            $validatedData['image'] = 'assets/images/' . $imageName;
+        }
+
+        Articles::create([
+            'title' => $validatedData['title'],
+            'short_desc' => $validatedData['short_desc'],
+            'description' => $validatedData['description'],
+            'img' => $validatedData['image'],
+        ]);
+
+        return redirect('/admin');
     }
 }

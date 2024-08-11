@@ -24,20 +24,20 @@
     </div>
 </header>
 <main class="main__container">
-    <form action="/admin/save/article/{{$article->id}}" method="POST" class="admin_edit__article" enctype="multipart/form-data" name="article_form" data-article-id="{{$article->id}}">
+    <form action="/admin/add/article" method="POST" class="admin_add__article" enctype="multipart/form-data" name="article_form">
         @csrf
-        <h1 class="main_article_addcomment_title">Редактирование записи</h1>
+        <h1 class="main_article_addcomment_title">Добавление записи</h1>
         <div class="main_article_group">
             <label for="username" class="main_article_group_label">Заглавие</label>
-            <input type="text" name="title" class="main_article_group_input" value="{{$article->title}}">
+            <input type="text" name="title" class="main_article_group_input">
         </div>
         <div class="main_article_group">
             <label for="username" class="main_article_group_label">Короткое описание</label>
-            <textarea type="text" name="short_desc" class="main_article_group_input" style="min-height: 170px">{{$article->short_desc}}</textarea>
+            <textarea type="text" name="short_desc" class="main_article_group_input" style="min-height: 170px"></textarea>
         </div>
         <div class="main_article_group">
             <label for="username" class="main_article_group_label">Описание</label>
-            <textarea type="text" name="description" class="main_article_group_input" style="min-height: 200px">{{$article->description}}</textarea>
+            <textarea type="text" name="description" class="main_article_group_input" style="min-height: 200px"></textarea>
         </div>
         <div class="main_article_group">
             <label for="username" class="main_article_group_label">Фотография</label>

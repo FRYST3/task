@@ -29,8 +29,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::group(['middleware' => 'admin'], function () {
         Route::get('/', [AdminController::class, 'index'])->name('admin_index');
         Route::get('/edit/article/{id}', [AdminController::class, 'article_edit']);
+        Route::get('/new/article', [AdminController::class, 'view_newArticle']);
 
         Route::post('/save/article/{id}', [AdminController::class, 'article_save']);
+        Route::post('/add/article', [AdminController::class, 'article_add']);
         Route::get('/delete/article/{id}', [AdminController::class, 'article_delete']);
     });
 });

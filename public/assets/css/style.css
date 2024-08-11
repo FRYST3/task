@@ -276,7 +276,7 @@ a {
     cursor: pointer;
 }
 
-.admin_edit__article {
+.admin_edit__article, .admin_add__article {
     width: 100%;
     padding: 15px;
     background: rgba(236, 240, 249, 0.04);

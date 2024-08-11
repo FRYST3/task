@@ -30,4 +30,28 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('.admin_add__article').submit(function(event) {
+        event.preventDefault();
+
+        var formData = new FormData($(this)[0]);
+
+        $.ajax({
+            url: '/admin/add/article',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                if (response.success) {
+                    notify('Успешно', 'success');
+                } else {
+                    notify('Ошибка', 'error');
+                }
+            },
+            error: function(error) {
+                notify('Ошибка', 'error');
+            }
+        });
+    });
 });
