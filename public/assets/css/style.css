@@ -196,6 +196,7 @@ a {
     border-radius: 12px;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .main_article_comments {

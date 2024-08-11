@@ -50,5 +50,33 @@ $(document).ready(function () {
         loadArticles(currentPage);
     });
 
+    $('.addcomment_btn').click(function () {
+        $.ajax({
+            type: 'POST',
+            url: '/add/comment',
+            data: {
+                id: $(this).data('article'),
+                name: $('#username').val(),
+                text: $('#comment').val(),
+            },
+            success: function (response) {
+                if (response.success) {
+                    const newComment = $('<div>')
+                        .addClass('main_article_comment')
+                        .append(
+                            $('<div>').addClass('main_article_comment_name').text(response.comment.name),
+                            $('<div>').addClass('main_article_comment_text').text(response.comment.text)
+                        );
+                    $('.main_article_comments').append(newComment);
+                    $('#username, #comment').val('');
+
+                    notify('Комментарий успешно добавлен', 'success')
+                } else {
+                    notify(response.message, 'error')
+                }
+            }
+        });
+    });
+
     loadArticles(currentPage);
 });

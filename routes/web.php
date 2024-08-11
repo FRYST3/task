@@ -20,3 +20,4 @@ Route::get('/', [PagesController::class,'index'])->name('index');
 Route::get('/article/{id}', [PagesController::class,'article'])->name('article');
 
 Route::post('/get/articles', [MainController::class,'getArticles']);
+Route::post('/add/comment', [MainController::class,'addComment']);

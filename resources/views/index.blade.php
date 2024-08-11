@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="/assets/css/style.css?v={{time()}}">
+    <link rel="stylesheet" href="/assets/css/notifyme.css">
 
     <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/notifyme.min.js"></script>
     <script src="/assets/js/main.js"></script>
 
     <title>BLOGNAME | FRYST</title>
