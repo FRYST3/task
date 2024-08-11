@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Articles;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -11,7 +12,7 @@ class PagesController extends Controller
         return view('index');
     }
 
-    public function article()
+    public function article($id)
     {
         return view('article');
     }

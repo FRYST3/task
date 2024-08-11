@@ -32,37 +32,8 @@
                 </div>
                 <a href="#" class="article_card__btn">Читать</a>
             </div>
-            <div href="#" class="article_card">
-                <div class="article_card__img">
-                    <img src="/assets/images/articles.webp" alt="">
-                </div>
-                <h1 class="article_card__title">Blog test article</h1>
-                <div class="article_card_description">
-                    Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article
-                </div>
-                <a href="#" class="article_card__btn">Читать</a>
-            </div>
-            <div href="#" class="article_card">
-                <div class="article_card__img">
-                    <img src="/assets/images/articles.webp" alt="">
-                </div>
-                <h1 class="article_card__title">Blog test article</h1>
-                <div class="article_card_description">
-                    Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article
-                </div>
-                <a href="#" class="article_card__btn">Читать</a>
-            </div>
-            <div href="#" class="article_card">
-                <div class="article_card__img">
-                    <img src="/assets/images/articles.webp" alt="">
-                </div>
-                <h1 class="article_card__title">Blog test article</h1>
-                <div class="article_card_description">
-                    Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article Blog test article
-                </div>
-                <a href="#" class="article_card__btn">Читать</a>
-            </div>
         </div>
+        <div class="load_more">Показать ещё</div>
     </main>
 </body>
 </html>

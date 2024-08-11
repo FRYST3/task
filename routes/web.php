@@ -17,4 +17,6 @@ use App\Http\Controllers\PagesController;
 */
 
 Route::get('/', [PagesController::class,'index'])->name('index');
-Route::get('/article', [PagesController::class,'article'])->name('article');
+Route::get('/article/{id}', [PagesController::class,'article'])->name('article');
+
+Route::post('/get/articles', [MainController::class,'getArticles']);
