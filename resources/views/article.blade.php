@@ -24,13 +24,13 @@
 <main class="main__container">
     <div class="main_article">
         <div class="main_article_header">
-            <span>BLOG NAME</span>
+            <span>{{$article->title}}</span>
         </div>
         <div class="main_article_img">
-            <img src="/assets/images/articles.webp" alt="">
+            <img src="{{$article->img}}" alt="">
         </div>
         <div class="main_article__description">
-            BLOG NAMEBLOG NAMEBLOG NAMEBLOG NAMEBLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME BLOG NAME
+            {{$article->description}}
         </div>
     </div>
     <div class="main_article_addcomment">
@@ -44,14 +44,16 @@
             <textarea type="text" id="username" class="main_article_group_input" style="min-height: 170px"></textarea>
         </div>
         <div class="main_article_group_btn">
-            <button class="addcomment_btn">Добавить</button>
+            <button class="addcomment_btn" data-article="{{$article->id}}">Добавить</button>
         </div>
     </div>
     <div class="main_article_comments">
-        <div class="main_article_comment">
-            <div class="main_article_comment_name">FRYST</div>
-            <div class="main_article_comment_text">GKDK GSKSK SGK SGKGOSDG LSDGO GSDLGSDK SDGOSDGLSD OSDKG LSDOG</div>
-        </div>
+        @foreach($comments as $comment)
+            <div class="main_article_comment">
+                <div class="main_article_comment_name">{{$comment->name}}</div>
+                <div class="main_article_comment_text">{{$comment->text}}</div>
+            </div>
+        @endforeach
     </div>
 </main>
 </body>
