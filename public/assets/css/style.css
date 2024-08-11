@@ -61,6 +61,7 @@ a {
 
 .main__container {
     margin-top: 15px;
+    margin-bottom: 15px;
     height: 100%;
 }
 
@@ -111,4 +112,116 @@ a {
     padding: 15px;
     text-align: center;
     margin-top: 10px;
+}
+
+.main_article {
+    padding: 15px;
+    background: rgba(236, 240, 249, 0.04);
+    border-radius: 12px;
+}
+
+.main_article_img, .main_article_img img {
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
+}
+
+.main_article_header {
+    padding: 15px 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    border-bottom: 1px solid rgba(236, 240, 249, 0.04);
+}
+
+.main_article__description {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(236, 240, 249, 0.4);
+}
+
+.main_article_addcomment {
+    padding: 15px;
+    background: rgba(236, 240, 249, 0.04);
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.main_article_addcomment_title {
+    font-size: 21px;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.main_article_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.main_article_group_label {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(236, 240, 249, 0.4);
+}
+
+.main_article_group_input {
+    padding: 7px 10px;
+    background: rgba(236, 240, 249, 0.06);
+    color: rgba(236, 240, 249, 1);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: 2px solid rgba(236, 240, 249, 0.06);
+    border-radius: 12px;
+}
+
+.main_article_group_btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.addcomment_btn {
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(61, 115, 255, 1);
+    color: #FFF;
+    padding: 15px 25px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+}
+
+.main_article_comments {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.main_article_comment {
+    padding: 15px;
+    background: rgba(236, 240, 249, 0.04);
+    border-radius: 12px;
+}
+
+.main_article_comment_name {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(236, 240, 249, 0.06);
+}
+
+.main_article_comment_text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(236, 240, 249, 0.4);
 }
